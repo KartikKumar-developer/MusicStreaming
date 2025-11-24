@@ -93,11 +93,13 @@ src/
 4. Push to the branch
 5. Create a new Pull Request
 
-# Direct Link for war file:-
-https://github.com/Vaibhav6907/MUSICIA/blob/main/target/musicia-1.0-SNAPSHOT.war
-## License
 
-This project is licensed under the MIT License.
+## Copyright
+# The project is made by Team_KDK members are -  
+1. Kartik Kumar(Team Leader)
+2. Dev Kaushik(Member)
+3. Kaishav Gehlot(Member)
+
 =======
 # musicplayer
 >>>>>>> 745a7b16041faf80aceff6ed622625bcf0a48c7c
