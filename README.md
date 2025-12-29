@@ -207,8 +207,4 @@ http://localhost:8080/musicia
 
 ---
 
-## 📊 Evaluation Criteria Coverage
-- Servlet Implementation ✔  
-- Code Quality & Execution ✔  
-- Innovation / Extra Effort ✔
 
