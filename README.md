@@ -1,136 +1,122 @@
-🎵 Musicia – Music Streaming Web Application
+# 🎵 Musicia – Music Streaming Web Application
 
-Musicia is a Java-based web music streaming platform developed using Java Servlets, JDBC, and MySQL.
-The application allows users to stream music online and artists to upload and manage their songs, demonstrating core concepts of server-side web development and MVC architecture.
+Musicia is a **Java-based web music streaming platform** developed using **Java Servlets, JDBC, and MySQL**.  
+The application allows **users to stream music online** and **artists to upload and manage their songs**, demonstrating core concepts of **server-side web development** and **MVC architecture**.
 
-📌 Core Features Implementation
+---
+
+## 📌 Core Features Implementation
 
 The project fully implements all required core functionalities as per project requirements:
 
-🔐 User Authentication
+### 🔐 User Authentication
+- Secure user registration and login
+- Session-based authentication for logged-in users
 
-Secure user registration and login
+### 🎤 Artist Module
+- Artist registration
+- Song upload with cover image support
 
-Session-based authentication for logged-in users
+### 🎧 Music Streaming
+- Users can browse and stream uploaded songs
+- Real-time audio playback using JavaScript
 
-🎤 Artist Module
-
-Artist registration
-
-Song upload with cover image support
-
-🎧 Music Streaming
-
-Users can browse and stream uploaded songs
-
-Real-time audio playback using JavaScript
-
-🔑 Role-Based Access
-
-Separate permissions for artists and users
-
-Secure access control handled via Java Servlets
+### 🔑 Role-Based Access
+- Separate permissions for artists and users
+- Secure access control handled via Java Servlets
 
 All modules are fully developed, integrated, and functional, providing a smooth user experience.
 
-⚙️ Technology Stack
-Layer	Technology
-Frontend	HTML, CSS, JavaScript
-Backend	Java Servlets
-Database	MySQL
-Build Tool	Maven
-Server	Apache Tomcat
-🏗️ System Architecture (MVC)
+---
 
-Musicia follows the Model–View–Controller (MVC) architecture:
+## ⚙️ Technology Stack
 
-🧩 Model
+| Layer | Technology |
+|------|-----------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Java Servlets |
+| Database | MySQL |
+| Build Tool | Maven |
+| Server | Apache Tomcat |
 
-User.java
+---
 
-Song.java
+## 🏗️ System Architecture (MVC)
 
-🎨 View
+Musicia follows the **Model–View–Controller (MVC)** architecture:
 
-HTML, CSS, JavaScript files
+### 🧩 Model
+- `User.java`
+- `Song.java`
 
-🎮 Controller
+### 🎨 View
+- HTML, CSS, JavaScript files
 
-AuthServlet
-
-SongServlet
+### 🎮 Controller
+- `AuthServlet`
+- `SongServlet`
 
 This architecture ensures clean code, modularity, and easy scalability.
 
-🔗 Integration of Components
+---
 
-Servlets act as controllers and handle HTTP requests
+## 🔗 Integration of Components
 
-DAO classes (UserDAO, SongDAO) manage database operations using JDBC
+- Servlets act as controllers and handle HTTP requests
+- DAO classes (`UserDAO`, `SongDAO`) manage database operations using JDBC
+- Utility classes handle database connectivity
+- Frontend communicates with backend through HTTP requests
+- All components are smoothly integrated for seamless data flow
 
-Utility classes handle database connectivity
+---
 
-Frontend communicates with backend through HTTP requests
+## 🧠 Event Handling & Processing
 
-All components are smoothly integrated for seamless data flow
+- JavaScript files (`auth.js`, `player.js`) manage user interactions
+- Event listeners handle:
+  - Login & registration
+  - Play / pause music
+  - Song uploads
+- Optimized event handling improves performance and responsiveness
 
-🧠 Event Handling & Processing
+---
 
-JavaScript files (auth.js, player.js) manage user interactions
+## ✅ Data Validation
 
-Event listeners handle:
+- **Client-side validation**
+  - Implemented using JavaScript to prevent empty or invalid inputs
+- **Server-side validation**
+  - Implemented in Servlets to ensure data integrity
+- Invalid data is rejected before database insertion
 
-Login & registration
+---
 
-Play / pause music
+## 🛡️ Error Handling & Robustness
 
-Song uploads
+- Try-catch blocks handle database and server exceptions
+- Invalid login credentials are handled gracefully
+- Upload and streaming errors do not crash the application
+- User-friendly error messages improve system robustness
 
-Optimized event handling improves performance and responsiveness
+---
 
-✅ Data Validation
+## 🧼 Code Quality & Innovation
 
-Client-side validation
+- Clean and modular code structure
+- Proper package separation: `dao`, `model`, `servlet`, `util`
+- Reusable database utility class
+- `PreparedStatement` used to prevent SQL injection
 
-Implemented using JavaScript to prevent empty or invalid inputs
+### 🌟 Innovative Features
+- Real-time music streaming
+- Artist-based song uploads
+- Scalable architecture for future enhancements
 
-Server-side validation
+---
 
-Implemented in Servlets to ensure data integrity
+## 📂 Project Structure
 
-Invalid data is rejected before database insertion
-
-🛡️ Error Handling & Robustness
-
-Try-catch blocks handle database and server exceptions
-
-Invalid login credentials are handled gracefully
-
-Upload and streaming errors do not crash the application
-
-User-friendly error messages improve system robustness
-
-🧼 Code Quality & Innovation
-
-Clean and modular code structure
-
-Proper package separation:
-
-dao, model, servlet, util
-
-Reusable database utility class
-
-PreparedStatement used to prevent SQL injection
-
-🌟 Innovative Features
-
-Real-time music streaming
-
-Artist-based song uploads
-
-Scalable architecture for future enhancements
-
-📂 Project Structure
+```text
 src/
 ├── main/
 │   ├── java/
@@ -159,81 +145,70 @@ src/
 │       ├── register.html
 │       └── upload.html
 
-🧪 Setup Instructions
-🔧 Prerequisites
+```
 
-Java 11 or higher
+## 🧪 Setup Instructions
 
-MySQL 8.0 or higher
+### 🔧 Prerequisites
+- Java 11 or higher  
+- MySQL 8.0 or higher  
+- Maven 3.6+  
+- Apache Tomcat 9+  
 
-Maven 3.6+
+### ⚙️ Installation Steps
 
-Apache Tomcat 9+
+1. **Clone the repository:**  
+```bash
+git clone <repository-url>
+```
 
-⚙️ Installation Steps
-
-Clone the repository
-
-Create the database:
-
+2. **Create the database:**
+```bash
 mysql -u root -p < src/main/resources/database.sql
-
-
-Configure database connection in db.properties:
-
+```
+3. **Configure database connection in db.properties:**
+```properties
 db.url=jdbc:mysql://localhost:3306/musicia
 db.username=your_username
 db.password=your_password
 db.driver=com.mysql.cj.jdbc.Driver
-
-
-Build the project:
-
+```
+4. **Build the project:**
+```bash
 mvn clean package
-
-
-Deploy the generated WAR file to Apache Tomcat
-
-Access the application:
-
+```
+5. **Deploy the generated WAR file to Apache Tomcat**
+6. **Access the application in your browser:**
+```bash
 http://localhost:8080/musicia
+```
+## ▶️ Usage Instructions
+- Register as a user or artist  
+- Login using valid credentials  
+- Artists can upload songs with cover images  
+- Users can browse and stream music  
+- Logout securely after use  
 
-▶️ Usage Instructions
+---
 
-Register as a user or artist
+## 🚀 Future Enhancements
+- Playlist creation  
+- Like & recommendation system  
+- Admin dashboard  
+- Cloud-based music storage  
 
-Login using valid credentials
+---
 
-Artists can upload songs with cover images
+## 👥 Team Details
+**Team Name:** Team KDK  
+- Kartik Kumar – Team Leader  
+- Dev Kaushik – Member  
+- Keshav Gehlot – Member  
 
-Users can browse and stream music
+---
 
-Logout securely after use
+## 📊 Evaluation Criteria Coverage
+- Servlet Implementation ✔  
+- Code Quality & Execution ✔  
+- Innovation / Extra Effort ✔
 
-🚀 Future Enhancements
-
-Playlist creation
-
-Like & recommendation system
-
-Admin dashboard
-
-Cloud-based music storage
-
-👥 Team Details
-
-Team Name: Team KDK
-
-Kartik Kumar – Team Leader
-
-Dev Kaushik – Member
-
-Keshav Gehlot – Member
-
-📊 Evaluation Criteria Coverage
-
-Servlet Implementation ✔
-
-Code Quality & Execution ✔
-
-Innovation / Extra Effort ✔
